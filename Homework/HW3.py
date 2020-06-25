@@ -23,7 +23,7 @@ for song in songs:
         
        
 #순위 따오기 힘들어 for문으로 숫자 +=1 해서 프린트함
-#strip()이 프린트에 안찍혀서 고생했지만 검색결과 singer.text.strip()으로 text를 지정해줘야함
+#strip()이 프린트에 안찍혀서 고생했지만 검색결과 singer.text.strip()으로 *text*를 지정해줘야함
 
 
 
