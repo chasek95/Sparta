@@ -2,8 +2,6 @@ from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
 #selen_________________________________________________
 import requests
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from urllib.parse import quote_plus
 from bs4 import BeautifulSoup
 from pymongo import MongoClient           
@@ -20,7 +18,7 @@ def home():
 def test_post():
    name_receive = request.form('name_give')
 
-      #selen_________________________________________________
+      #crawl.py로
    base_url = 'https://terms.naver.com/search.nhn?query='
    plus_url = 'name_receive'
    # plus_url = input('약품 이름을 입력하세요! :')
@@ -36,10 +34,10 @@ def test_post():
 
 #    # meta tag를 먼저 가져오기.
 
-#    name = soup.select_one('meta[property="og:title"]')
-#    image = soup.select_one('meta[property="og:image"]')['content']
-#    desc = soup.select_one('meta[property="og:description"]')
-#    print(name)
+   name = soup.select_one('meta[property="og:title"]')
+   image = soup.select_one('meta[property="og:image"]')['content']
+   desc = soup.select_one('meta[property="og:description"]')
+   print(name)
 
 
 
